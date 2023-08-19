@@ -78,6 +78,8 @@ internal class Program
     }
     private static void ChangePath()
     {
+        Console.WriteLine();
+        Console.Write("Current Path: "+ directoryPath);
         string newPath;
         do
         {
@@ -226,7 +228,7 @@ internal class Program
         do
         {
             Console.Write("Enter File Path: ");
-            directoryPath = Console.ReadLine();
+            directoryPath = @$"{Console.ReadLine()}";
         } while (string.IsNullOrEmpty(directoryPath));
 
         DisplayOption();
